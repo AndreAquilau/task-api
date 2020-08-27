@@ -1,5 +1,5 @@
 module.exports = {
-  type: process.env.TYPEORM_TYPE_CONNECTION,
+  type: 'postgres',
   url: process.env.DATABASE_URL,
   synchronize: false,
   logging: false,
