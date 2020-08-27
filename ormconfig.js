@@ -1,8 +1,8 @@
 module.exports = {
   type: process.env.TYPEORM_TYPE_CONNECTION,
   url: process.env.DATABASE_URL,
-  synchronize: process.env.TYPEORM_SYNCHRONIZE,
-  logging: process.env.TYPEORM_LOGGING,
+  synchronize: false,
+  logging: false,
   entities: [process.env.TYPEORM_ENTITIES || 'dist/models/**/*.js'],
   migrations: [
     process.env.TYPEORM_MIGRATIONS || 'dist/database/migration/**/*.js',

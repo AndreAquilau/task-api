@@ -8,11 +8,11 @@ database
     console.log(`Connection DataBase Success`);
     app.emit('ServerOn');
   })
-  .catch((err) => console.log(err.message));
+  .catch((err) => console.log(err));
 
 app.on('ServerOn', () => {
   app.listen(process.env.PORT, () => {
-    if (process.env.MODE === 'development') {
+    if (process.env.MODE == 'development') {
       console.log(`http://localhost:${process.env.PORT}`);
     }
   });
