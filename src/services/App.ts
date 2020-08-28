@@ -18,7 +18,7 @@ class App {
   public middeware() {
     this.app.use(helmet());
     this.app.use(morgan('dev'));
-    this.app.use(cors({ origin: '' }));
+    this.app.use(cors());
     this.app.use(urlencoded({ extended: true }));
     this.app.use(json());
     this.app.use(
